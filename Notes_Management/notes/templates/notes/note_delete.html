@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+
+{%load static %}
+{% block css_style %}
+    <link rel="stylesheet" href="{% static 'css/note_delete.css' %}">
+{% endblock %}
+
+
+{% block title %}
+    delete!
+{% endblock %}
+
+{% block content %}
+    <div class="delete-confirm-container">
+        <h2>حذف نوت</h2>
+        <p>آیا مطمئن هستید که می‌خواهید این نوت را حذف کنید؟</p>
+        <strong>{{ object.title }}</strong>
+        
+        <form method="post">
+            {% csrf_token %}
+            <button type="submit" class="btn-delete">بله، حذف شود</button>
+            <a href="{% url 'user_list' %}" class="btn-cancel">لغو</a>
+        </form>
+    </div>
+{% endblock %}

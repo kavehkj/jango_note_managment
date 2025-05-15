@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{%load static %}
+{% block css_style %}
+    <link rel="stylesheet" href="{% static 'css/note_edit.css' %}">
+{% endblock %}
+
+{% block title %}
+    edite note
+{% endblock %}
+
+
+{% block content %}
+<div class="edit-container">
+    <h2>ویرایش یادداشت</h2>
+    <form method="POST" enctype="multipart/form-data">  <!-- enctype را اضافه کن -->
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">ذخیره تغییرات</button>
+    </form>
+</div>
+{% endblock %}

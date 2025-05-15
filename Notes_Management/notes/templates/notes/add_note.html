@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{%load static %}
+{% block css_style %}
+    <link rel="stylesheet" href="{% static 'css/add_note.css' %}">
+{% endblock %}
+
+{% block title %}
+    add note
+{% endblock %}
+
+
+
+{% block content %}
+
+    <h2>add new note</h2>
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" id = "test">submit</button>
+    </form>
+
+{% endblock %}

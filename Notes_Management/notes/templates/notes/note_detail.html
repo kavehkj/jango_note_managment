@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{%load static %}
+{% block css_style %}
+    <link rel="stylesheet" href="{% static 'css/note_detail.css' %}">
+{% endblock %}
+
+{% block title %}
+    {{ note.title }}
+{% endblock %}
+
+{% block content %}
+
+<div class="note">
+
+    <div class="note-header">
+        <div class="note-image">
+            <img src="{{ note.image.url }}" alt="{{ note.title }}">
+        </div>
+
+        <div class="note-info">
+            <h2>{{ note.title }}</h2>
+            <div class="note-meta">
+                <p><strong>Author:</strong> {{ note.user.username }}</p>
+                <p><strong>Date:</strong> {{ note.created_at }}</p>
+            </div>
+        </div>
+    </div>
+
+    <p class="note-content">{{ note.content }}</p>
+</div>
+
+    
+{% endblock %}

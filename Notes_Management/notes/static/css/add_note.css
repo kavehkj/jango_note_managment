@@ -1,0 +1,186 @@
+/* Container برای صفحه */
+.add-note-container {
+    width: 90%; /* عرض کمتر */
+    max-width: 500px; /* حداکثر عرض کوچک‌تر */
+    margin: 50px auto;
+    padding: 30px;
+    background: linear-gradient(135deg, #1e3a5f, #28527a);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    color: #e0e0e0;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* عنوان صفحه */
+h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #f8f8f8;
+}
+
+/* فرم */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%; /* برای فرم */
+    align-items: center; /* برای فرم */
+}
+
+/* فیلدهای ورودی */
+input, textarea {
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #517da2;
+    background: #f2f2f2;
+    color: #1e3a5f;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    max-width: 450px; /* حداکثر عرض برای فیلدهای ورودی */
+    
+}
+
+/* فوکوس روی فیلد */
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #3b668d;
+    box-shadow: 0 0 6px rgba(59, 102, 141, 0.6);
+}
+
+/* اندازه و استایل textarea */
+textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+/* لیبل‌ها */
+label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #b0c4de;
+    display: block;
+    text-align: left;
+    margin-bottom: 8px;
+    padding-left: 10px;
+}
+
+/* دکمه ارسال */
+button {
+    padding: 12px 20px;
+    font-size: 16px;
+    background: linear-gradient(135deg, #204c75, #3b668d);
+    color: white;
+    border: none;
+    border-radius: 25px !important;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    width: 100%;
+    max-width: 450px; /* حداکثر عرض برای دکمه */
+    font-weight: bold;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #183a5a, #315778);
+    transform: scale(1.03);
+    box-shadow: 0 4px 10px rgba(32, 76, 117, 0.4);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* پیغام خطا */
+.form-error {
+    color: #ff4f7b;
+    font-size: 14px;
+    text-align: center;
+}
+
+/* لینک‌ها */
+a {
+    color: #88bde7;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #6fa8dc;
+    text-decoration: underline;
+}
+
+/* پاداش‌ها (در صورت وجود) */
+.success-message {
+    color: #4CAF50;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+p {
+    font-size: 16px;
+    color: #1e3a5f;
+    margin-top: 20px;
+}
+
+p a {
+    color: #204c75;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+p a:hover {
+    color: #102a47;
+    text-decoration: underline;
+    transform: scale(1.05);
+}
+#id_status {
+    display: flex !important;
+    gap: 10px !important;
+    justify-content: center !important;
+    margin-top: 10px !important;
+}
+
+#id_status input[type="radio"] {
+    appearance: none !important;
+    width: 20px !important;
+    height: 20px !important;
+    border-radius: 50% !important;
+    border: 2px solid #517da2 !important;
+    background-color: #f2f2f2 !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+}
+
+#id_status input[type="radio"]:checked {
+    background-color: #3b668d;
+    border-color: #28527a;
+}
+
+#id_status input[type="radio"]:hover {
+    box-shadow: 0 0 6px rgba(59, 102, 141, 0.6);
+}
+
+#id_status input[type="radio"]:checked + label {
+    color: #3b668d;
+}
+
+/* استایل برای هر گزینه خاص */
+#id_status input[type="radio"][value="option1"] {
+    background-color: #a2d8f7;
+}
+
+#id_status input[type="radio"][value="option2"] {
+    background-color: #f7a2d8;
+}
+
+#test {
+margin-bottom: 100px;
+
+
+}

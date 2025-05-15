@@ -1,0 +1,137 @@
+/* استایل کلی برای صفحه اصلی */
+body {
+    background-color: #f4f7fb; /* پس‌زمینه صفحه به رنگ ملایم‌تر */
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+/* استایل کلی برای کانتینر نوت‌ها */
+.notes-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    padding: 40px 20px;
+    margin-top: -30px; /* از بین بردن فضای سفید اضافی */
+    background-color: #f4f7fb; /* پس‌زمینه اصلی */
+}
+
+/* استایل هر نوت */
+.note {
+    width: 300px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    padding: 15px; /* کاهش فاصله داخلی */
+    margin-bottom: 15px; /* کاهش فاصله بین پست‌ها */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;  /* فضای موجود را در بین بخش‌ها توزیع می‌کند */
+    min-height: 300px;  /* ارتفاع نوت‌ها را تنظیم می‌کند */
+}
+
+/* انیمیشن برای نمایش کارت‌ها */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* استایل تصویر نوت */
+.note-image img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%; /* دایره‌ای شدن عکس */
+    margin: 20px auto; /* قرار دادن عکس در وسط */
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+/* تغییرات روی عکس هنگام هاور */
+.note-image img:hover {
+    transform: scale(1.05);
+}
+
+/* عنوان نوت */
+.note h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    padding: 15px 0;
+    margin: 10px 0;
+    background-color: #f8f9fa;  /* پس‌زمینه ملایم برای عنوان */
+    border-radius: 50px;  /* گرد کردن گوشه‌ها */
+    border-bottom: 2px solid #ddd;
+}
+
+/* نمایش نام نویسنده */
+.note p strong {
+    background-color: #ffb84d;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 20px;
+    margin-right: 5px;
+    margin-bottom: 5px; /* کاهش فاصله بین نویسنده و متن */
+}
+
+/* نمایش بخش کوتاه محتوا */
+
+.note p {
+    font-size: 14px;
+    color: #676767;
+    padding: 5px 10px; 
+    height: 60px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.3;
+    margin-top: 5px; /* کاهش فاصله بین متن و نویسنده */
+}
+
+/* لینک "Read more" */
+.note a {
+    display: inline-block;
+    padding: 12px 18px;
+    font-size: 16px;
+    text-align: center;
+    background-color: #007bff;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+    margin: 10px auto 0;  /* اینجا margin:auto برای وسط‌چین کردن استفاده شده */
+}
+
+/* تغییر رنگ دکمه هنگام هاور */
+.note a:hover {
+    background-color: #005fa3;
+    transform: translateY(-5px);
+}
+
+/* افکت هاور بر روی کارت */
+.note:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* استایل عنوان صفحه */
+h1 {
+    font-size: 36px;
+    text-align: center;
+    color: #283c5b;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    padding-top: 20px; /* فاصله از بالای متن */
+    padding-bottom: 20px; /* فاصله از پایین متن */
+}

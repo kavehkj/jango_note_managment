@@ -1,0 +1,72 @@
+.delete-confirm-container {
+    text-align: center;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+    width: 350px;
+    margin: 50px auto;
+    font-family: 'Arial', sans-serif;
+}
+
+.delete-confirm-container h2 {
+    color: #333;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.delete-confirm-container p {
+    color: #555;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.delete-confirm-container strong {
+    display: block;
+    font-size: 18px;
+    color: #d9534f;
+    margin-bottom: 20px;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.btn-delete {
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s;
+    box-shadow: 0px 3px 8px rgba(231, 76, 60, 0.4);
+}
+
+.btn-delete:hover {
+    background: linear-gradient(135deg, #c0392b, #a93226);
+    box-shadow: 0px 5px 12px rgba(192, 57, 43, 0.5);
+}
+
+.btn-cancel {
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s;
+    box-shadow: 0px 3px 8px rgba(52, 152, 219, 0.4);
+    display: inline-block;
+}
+
+.btn-cancel:hover {
+    background: linear-gradient(135deg, #2980b9, #1f618d);
+    box-shadow: 0px 5px 12px rgba(41, 128, 185, 0.5);
+}
